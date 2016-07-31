@@ -1,3 +1,4 @@
+object ListPractice {
 sealed trait List[+A]
 
 case object Nil extends List[Nothing]
@@ -59,7 +60,6 @@ object List {
     }
   }
 }
-
 class SuperMe {
   def apply() = {}
 }
@@ -78,4 +78,4 @@ List.drop(List(1, 2, 3, 4), 1)
 List.dropWhile(List(1, 2, 3, 4))((a) => a < 2)
 
 List.append(List(1, 2, 3, 4), List(5, 6, 7))
-
+}
