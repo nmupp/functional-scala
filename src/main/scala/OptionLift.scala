@@ -14,6 +14,15 @@ object OptionLift {
       }
     }
   }
+
+  def mapUsingFor[A,B,C](a:Option[A],b:Option[B])(f:(A,B) => Int):Option[C] = {
+    for {
+      a <- a
+      b <- b
+    } yield f(a,b)
+  }
+
   map2(Some(10),Some(10))(sum)
+  mapUsingFor(Some(10),Some(10))(sum)
 
 }
