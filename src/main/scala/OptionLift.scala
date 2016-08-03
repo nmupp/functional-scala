@@ -15,7 +15,7 @@ object OptionLift {
     }
   }
 
-  def mapUsingFor[A,B,C](a:Option[A],b:Option[B])(f:(A,B) => Int):Option[C] = {
+  def mapUsingFor[A,B,C](a:Option[A],b:Option[B])(f:(A,B) => Int) = {
     for {
       a <- a
       b <- b
